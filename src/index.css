@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brandDark1: #151419;
+  --color-brandDark2: #1A1A1E;
+  --color-brandCardDark: #141418;
+  --color-brandCardLight: #212127;
+  --color-brandYellow: #e5f134;
+  --color-brandMuted: #9da0aa;
+  --color-brandText: #f4f4f6;
+
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-marcellus: 'Marcellus', serif;
+
+  --shadow-glow-yellow: 0 0 20px rgba(229, 241, 52, 0.18);
+  --shadow-glow-btn: 0 4px 20px rgba(229, 241, 52, 0.18);
+  --shadow-glow-btn-hover: 0 8px 30px rgba(229, 241, 52, 0.35);
+  --shadow-card-elevated: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-card-showcase: 0 20px 35px rgba(0, 0, 0, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-satoshi);
+  background-color: var(--color-brandDark1);
+  color: var(--color-brandText);
+  overflow-x: hidden;
+}
+
+.font-marcellus {
+  font-family: var(--font-marcellus);
+}
+
+@keyframes infiniteScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-infinite-scroll {
+  animation: infiniteScroll 25s linear infinite;
+}
+
+.marquee-container:hover .animate-infinite-scroll {
+  animation-play-state: paused;
+}
