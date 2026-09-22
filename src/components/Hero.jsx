@@ -38,16 +38,16 @@ export default function Hero() {
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="#projects"
+                href="#agent"
                 className="bg-brandYellow text-[#0c0c0e] px-7 py-3 rounded-full font-bold inline-flex items-center gap-2 shadow-glow-btn hover:-translate-y-0.5 hover:shadow-glow-btn-hover transition-all duration-300"
               >
-                View my work <i className="ri-arrow-right-up-line"></i>
+                Try My AI Assistant <i className="ri-arrow-right-up-line"></i>
               </a>
               <a
-                href="#contact"
+                href="#projects"
                 className="bg-white/[0.04] border border-white/[0.08] text-white px-7 py-3 rounded-full font-semibold hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
               >
-                Get in touch
+                View my work
               </a>
             </div>
           </div>

@@ -9,11 +9,25 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SkeletonLoader from './components/SkeletonLoader';
 import CustomCursor from './components/CustomCursor';
+import NotFound from './components/NotFound';
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  // Check the path synchronously at startup
+  const [isNotFound] = useState(() => {
+    const path = window.location.pathname;
+    return path !== '/' && path !== '';
+  });
+
+  // If it's a 404, start loading as false; otherwise true for the skeleton
+  const [loading, setLoading] = useState(() => {
+    const path = window.location.pathname;
+    return path === '/' || path === '';
+  });
 
   useEffect(() => {
+    // Skip loader listeners completely if displaying 404
+    if (isNotFound) return;
+
     // Simulates initial hydration / asset warmup (just like YouTube/Instagram)
     const handleLoad = () => setLoading(false);
 
@@ -24,7 +38,16 @@ export default function App() {
       window.addEventListener('load', handleLoad);
       return () => window.removeEventListener('load', handleLoad);
     }
-  }, []);
+  }, [isNotFound]);
+
+  if (isNotFound) {
+    return (
+      <div className="bg-brandDark1 text-brandText font-satoshi min-h-screen selection:bg-brandYellow selection:text-black">
+        <CustomCursor />
+        <NotFound />
+      </div>
+    );
+  }
 
   if (loading) {
     return <SkeletonLoader />;

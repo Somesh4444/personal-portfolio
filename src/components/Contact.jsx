@@ -52,7 +52,7 @@ export default function Contact() {
                 { name: "📌 Subject", value: formData.subject || "General Inquiry", inline: false },
                 { name: "📝 Message", value: formData.message || "No content" }
               ],
-              footer: { text: "somesh4444.github.io/portfolio • Dual Dispatch" },
+              footer: { text: "somesh-dev.netlify.app • Dual Dispatch" },
               timestamp: new Date().toISOString()
             }
           ]
