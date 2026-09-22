@@ -36,20 +36,22 @@ export default function Hero() {
               I build fast, reliable websites and web applications with modern frontend & backend technologies — from custom WordPress solutions to full-stack applications & AI-powered features.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
-              <a
-                href="#agent"
-                className="bg-brandYellow text-[#0c0c0e] px-7 py-3 rounded-full font-bold inline-flex items-center gap-2 shadow-glow-btn hover:-translate-y-0.5 hover:shadow-glow-btn-hover transition-all duration-300"
-              >
-                Try My AI Assistant <i className="ri-arrow-right-up-line"></i>
-              </a>
-              <a
-                href="#projects"
-                className="bg-white/[0.04] border border-white/[0.08] text-white px-7 py-3 rounded-full font-semibold hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
-              >
-                View my work
-              </a>
-            </div>
+           <div className="flex items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
+  <a
+    href="#agent"
+    className="flex-1 sm:flex-initial justify-center bg-brandYellow text-[#0c0c0e] px-4 py-2.5 sm:px-7 sm:py-3 rounded-full font-bold inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base whitespace-nowrap shadow-glow-btn hover:-translate-y-0.5 hover:shadow-glow-btn-hover transition-all duration-300"
+  >
+    <span>Try My AI Assistant</span>
+    <i className="ri-arrow-right-up-line text-sm sm:text-base"></i>
+  </a>
+
+  <a
+    href="#projects"
+    className="flex-1 sm:flex-initial justify-center bg-white/[0.04] border border-white/[0.08] text-white px-4 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold inline-flex items-center text-xs sm:text-base whitespace-nowrap hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
+  >
+    View my work
+  </a>
+</div>
           </div>
 
           {/* Portrait cell — tall, spans both rows, clean bordered card */}
@@ -86,7 +88,7 @@ export default function Hero() {
           </span>
 
           <p className="text-white/90 text-sm leading-snug">
-             <span className="text-white font-medium">Full Stack Developer at SEOFIED INTERNATIONAL</span>
+             <span className="text-white font-medium">Full Stack Developer at <br></br> SEOFIED INDIA</span>
           </p>
         </div>
 

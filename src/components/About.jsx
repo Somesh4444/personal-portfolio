@@ -1,13 +1,17 @@
 export default function About() {
   return (
-    <section className="relative bg-brandDark2 py-24 sm:py-28 lg:py-32 overflow-visible border-t border-white/[0.06]" id="about">
-      <div className="absolute top-1/4 -right-20 w-[550px] h-[550px] rounded-full blur-[160px] bg-[radial-gradient(circle,rgba(229,241,52,0.04)_0%,transparent_70%)] pointer-events-none"></div>
+    <section className="relative bg-brandDark2 py-24 sm:py-28 lg:py-32 border-t border-white/[0.06]" id="about">
+      {/* ISOLATED GLOW CONTAINER: Handles overflow clipping without breaking position:sticky on the section */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -right-20 w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] rounded-full blur-[120px] sm:blur-[160px] bg-[radial-gradient(circle,rgba(229,241,52,0.04)_0%,transparent_70%)]"></div>
+      </div>
 
-      <div className="max-w-[1240px] mx-auto px-6 sm:px-8 relative z-10">
+      <div className="max-w-[1240px] mx-auto px-6 sm:px-8 relative z-10 w-full">
+        {/* Grid container with items-start allows sticky element to scroll with the grid track */}
         <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-14 lg:gap-24 items-start relative">
           
           {/* LEFT: STICKY MANIFESTO */}
-          <div className="lg:sticky lg:top-28 self-start flex flex-col items-start pb-6 lg:pb-12">
+          <div className="lg:sticky lg:top-28 z-20 self-start flex flex-col items-start pb-6 lg:pb-12 w-full">
             <div className="flex items-center gap-3 mb-6">
               <span className="w-8 h-px bg-brandYellow"></span>
               <span className="text-xs font-mono text-brandYellow tracking-widest uppercase">03 // How I Work</span>
@@ -40,11 +44,11 @@ export default function About() {
             </div>
           </div>
 
-         {/* RIGHT: SCROLLABLE PILLARS */}
+          {/* RIGHT: SCROLLABLE PILLARS */}
           <div className="flex flex-col w-full border-t border-white/[0.08]">
 
             {/* ROW 1 */}
-            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 hover:pl-3">
+            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 md:hover:pl-3">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono text-brandMuted group-hover:text-brandYellow transition-colors">
                   / 01 — BACKEND
@@ -75,9 +79,8 @@ export default function About() {
               </div>
             </div>
 
-
             {/* ROW 2 */}
-            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 hover:pl-3">
+            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 md:hover:pl-3">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono text-brandMuted group-hover:text-brandYellow transition-colors">
                   / 02 — FRONTEND
@@ -108,9 +111,8 @@ export default function About() {
               </div>
             </div>
 
-
             {/* ROW 3 */}
-            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 hover:pl-3">
+            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 md:hover:pl-3">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono text-brandMuted group-hover:text-brandYellow transition-colors">
                   / 03 — WORDPRESS
@@ -141,9 +143,8 @@ export default function About() {
               </div>
             </div>
 
-
             {/* ROW 4 */}
-            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 hover:pl-3">
+            <div className="group py-10 sm:py-12 border-b border-white/[0.08] transition-all duration-300 md:hover:pl-3">
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-mono text-brandMuted group-hover:text-brandYellow transition-colors">
                   / 04 — AI & PERFORMANCE
@@ -173,7 +174,6 @@ export default function About() {
                 <span className="text-gray-300">Lighthouse</span>
               </div>
             </div>
-
 
             {/* ROW 5: CTA */}
             <div className="pt-10 sm:pt-12 flex flex-col sm:flex-row justify-between sm:items-center gap-6">
