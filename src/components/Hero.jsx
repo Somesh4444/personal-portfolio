@@ -37,21 +37,21 @@ export default function Hero() {
             </p>
 
            <div className="flex items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
-  <a
-    href="#agent"
-    className="flex-1 sm:flex-initial justify-center bg-brandYellow text-[#0c0c0e] px-4 py-2.5 sm:px-7 sm:py-3 rounded-full font-bold inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base whitespace-nowrap shadow-glow-btn hover:-translate-y-0.5 hover:shadow-glow-btn-hover transition-all duration-300"
-  >
-    <span>Try My AI Assistant</span>
-    <i className="ri-arrow-right-up-line text-sm sm:text-base"></i>
-  </a>
+            <a
+              href="#agent"
+              className="flex-1 sm:flex-initial justify-center bg-brandYellow text-[#0c0c0e] px-4 py-2.5 sm:px-7 sm:py-3 rounded-full font-bold inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-base whitespace-nowrap shadow-glow-btn hover:-translate-y-0.5 hover:shadow-glow-btn-hover transition-all duration-300"
+            >
+              <span>Try My AI Assistant</span>
+              <i className="ri-arrow-right-up-line text-sm sm:text-base"></i>
+            </a>
 
-  <a
-    href="#projects"
-    className="flex-1 sm:flex-initial justify-center bg-white/[0.04] border border-white/[0.08] text-white px-4 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold inline-flex items-center text-xs sm:text-base whitespace-nowrap hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
-  >
-    View my work
-  </a>
-</div>
+            <a
+              href="#projects"
+              className="flex-1 sm:flex-initial justify-center bg-white/[0.04] border border-white/[0.08] text-white px-4 py-2.5 sm:px-7 sm:py-3 rounded-full font-semibold inline-flex items-center text-xs sm:text-base whitespace-nowrap hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
+            >
+              View my work
+            </a>
+          </div>
           </div>
 
           {/* Portrait cell — tall, spans both rows, clean bordered card */}
@@ -65,21 +65,21 @@ export default function Hero() {
 
           {/* Stats cell */}
           <div className="bento-stats rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-5 flex items-center justify-between gap-4">
-            <div>
-              <span className="font-mono text-xl sm:text-2xl font-bold text-white block leading-none mb-1">02</span>
-              <span className="text-[11px] text-brandMuted">Years exp.</span>
+              <div>
+                <span className="font-mono text-xl sm:text-2xl font-bold text-white block leading-none mb-1">{String(Math.max(2, new Date().getFullYear() - 2024)).padStart(2, "0")}</span>
+                <span className="text-[11px] text-brandMuted">Years exp.</span>
+              </div>
+              <div className="w-px h-8 bg-white/10"></div>
+              <div>
+                <span className="font-mono text-xl sm:text-2xl font-bold text-white block leading-none mb-1">{Math.max(20, (new Date().getFullYear() - 2024) * 10)}+</span>
+                <span className="text-[11px] text-brandMuted">Real Projects</span>
+              </div>
+              <div className="w-px h-8 bg-white/10"></div>
+              <div>
+                <span className="font-mono text-xl sm:text-2xl font-bold text-white block leading-none mb-1">{10 + Math.max(0, new Date().getFullYear() - 2026) * 3}+</span>
+                <span className="text-[11px] text-brandMuted">Technologies</span>
+              </div>
             </div>
-            <div className="w-px h-8 bg-white/10"></div>
-            <div>
-              <span className="font-mono text-xl sm:text-2xl font-bold text-white block leading-none mb-1">20+</span>
-              <span className="text-[11px] text-brandMuted">Real Projects</span>
-            </div>
-            <div className="w-px h-8 bg-white/10"></div>
-            <div>
-              <span className="font-mono text-xl sm:text-2xl font-bold text-white block leading-none mb-1">10+</span>
-              <span className="text-[11px] text-brandMuted">Technologies</span>
-            </div>
-          </div>
 
           {/* Focus cell — adds personality without duplicating the stats or the site's existing tech marquee */}
          <div className="bento-focus rounded-2xl border border-white/[0.08] bg-white/[0.02] px-5 py-5 flex flex-col justify-center">
