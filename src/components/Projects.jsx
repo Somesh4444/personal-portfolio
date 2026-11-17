@@ -145,7 +145,9 @@ export default function Projects() {
                         ))}
                       </div>
                       <a 
-                        href={project.link} 
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-white group-hover:bg-brandYellow group-hover:text-black transition-all"
                       >
                         <i className="ri-arrow-right-up-line text-lg"></i>
